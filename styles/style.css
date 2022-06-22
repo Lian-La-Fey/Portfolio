@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600&display=swap");
+:root {
+  --body-font: 'League Spartan', sans-serif;
+  --color-primary: #222831;
+  --color-secondary: #FF2E63;
+  --color-active: #00ADB5;
+  --color-gray: #393E46;
+  --color-white: #FFF;
+  --color-black: #000;
+  --text-color: #F6F6F6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--color-primary);
+  font-size: 1.6rem;
+  color: var(--text-color);
+  -webkit-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  z-index: 5;
+  top: 50%;
+  right: 3%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.navbar .active {
+  color: var(--color-active) !important;
+}
+
+.navbar .nav-link {
+  cursor: pointer;
+  padding: 1rem;
+  background-color: var(--color-gray);
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: .8rem 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.navbar .nav-link i {
+  color: var(--color-secondary);
+}
+/*# sourceMappingURL=style.css.map */
