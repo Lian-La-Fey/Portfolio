@@ -21,7 +21,7 @@
 
 html {
     scroll-behavior: smooth;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 body {
@@ -30,6 +30,10 @@ body {
     font-size: 1.6rem;
     color: var(--text-color);
     transition: all 500ms ease-out;
+}
+
+.block {
+    display: block;
 }
 
 .navbar {
@@ -62,6 +66,101 @@ body {
         
         i {
             color: var(--color-secondary);
+        }
+        
+    }
+    
+    .nav-link:hover {
+        i {
+            color: var(--color-active);
+        }
+    }
+}
+
+.container-my {
+    height: 100vh;
+    width: 100vw;
+}
+
+#home {
+    background: url("../img/home_bg.jpg") no-repeat center right/cover;
+    
+    .header-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 10%;
+        
+        .info {
+            background: rgba(46, 76, 109, 0.2);
+            border-radius: 2rem;
+            margin-left: 2rem;
+            width: 90%;
+            padding: 50px;
+        }
+        
+        h1 {
+            padding: 1rem 0;
+            font-size: 4rem;
+            line-height: 1.2;
+        }
+        
+        .btn {
+            color: var(--color-active);
+            margin-right: 1rem;
+            background-color: var(--color-primary);
+            font-size: 16px;
+        }
+        
+        .portrait {
+            background: rgba(46, 76, 109, 0.2);
+            border-radius: 2rem;
+            margin-right: 30%;
+            text-align: center;
+            position: relative;
+            padding: 20px;
+        }
+        
+        .portrait img {
+            border-radius: 40px;
+            height: 500px;
+            opacity: .9;
+        }
+        
+        .portrait::before {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-bottom: 8px solid var(--color-active);
+            border-left: 8px solid var(--color-active);
+            bottom: 0;
+            left: 0;
+        }
+        
+        .portrait::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-top: 8px solid var(--color-active);
+            border-right: 8px solid var(--color-active);
+            top: 0;
+            right: 0;
+        }
+    }
+    
+    
+}
+
+
+@media (max-width: 768px) {
+    #home {
+        .header-content {
+            grid-template-columns: 1fr;
+        }
+        
+        .info {
+            width: 75%;
         }
     }
 }
